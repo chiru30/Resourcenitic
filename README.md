@@ -33,8 +33,8 @@ Also , natural resources boosts the Indian Economy
 
 ## Screenshots
 <p align="center"> 
-<img width="450"  src="pic1.PNG"  />
-<img width="450"  src="pic2.PNG"  />
+<img width="450"  src="pic1.png"  />
+<img width="450"  src="pic2.png"  />
 </p
 
 
@@ -54,8 +54,8 @@ Also , natural resources boosts the Indian Economy
 
 ## Code Examples
 <p align="center"> 
-<img width="450"  src="random_forest.PNG"  />
-<img width="450"  src="backend_code.PNG"  />
+<img width="450"  src="random_forest.png"  />
+<img width="450"  src="backend_code.png"  />
 </p
 
 ## Features
