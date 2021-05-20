@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+  .second-content{
+        padding:100px;
+        margin-left:600px;
+  }
+  h2{
+    margin-left:600px;
+  }
+</style>
+<body>
+    <nav class="navbar navbar-light  justify-content-between" style="background-color:rgb(218, 229, 240)">
+        <form class="form-inline" style="padding:5px;">
+          <a href="/" class="btn btn-outline-primary  " type="submit">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="/land" class="btn btn-outline-primary  " type="submit">Land Prediction</a>&nbsp;&nbsp;&nbsp;
+          <a href="/home" class="btn btn-outline-primary  " type="submit">Region Prediction</a>&nbsp;&nbsp;&nbsp;
+        </form>
+      </nav>
+      <div class="content" style="padding:20px;">
+      <h5 style="font-weight: bold;">Landtype Prediction: </h5>
+
+        <p> Yield : Yield is a return measure for an investment over a set period of time, expressed as a percentage. </p>
+        
+        <h5 style="font-weight: bold;"> What Yield Can Tell You:</h5>
+        <p>Since a higher yield value indicates that an investor is able to recover higher amounts of cashflows in his investments, a higher value is often perceived as an indicator of lower risk and higher income
+        
+        Yield Factor : The ratio of the amount of material that results from an industrial process to the amount of material that went into it.</p>
+        <h5 style="font-weight: bold;">What does this section predict:</h5>
+ <p>To build any power plant/ industry/project , yield factor , national yield and world yield percentage plays a key role. Land type where the project will be build will have a linear relationship with positive yield percentage.
+Hence , before building the project , this lets the industrialists and investors find out the feasible land type like crop land , forest land etc based on the yield inputs they tend to achieve.</p>
+
+<h5 style="font-weight: bold;">How this works: </h5>
+<p> 1. Enter the national yield , world yield and yield factor percentages you tend to achieve in your project. <br>
+2. Click on “Predict” to find out the feasible land type suitable foe the yield percentages. </p></div>
+      <div class="second-content">
+      <form action="/predict1" method="POST">
+        <input type="text" name="NY" placeholder="National Yield" style="width:20%;height:60px;border-radius:0.5em;"><br><br>
+        <input type="text" name="WY" placeholder="World Yield" style="width:20%;height:60px;border-radius:0.5em;"><br><br>
+        <input type="text" name="YF" placeholder="Yield Factor" style="width:20%;height:60px;border-radius:0.5em;"><br><br>
+        <button class="btn btn-outline-primary" style="padding:15px;width:15%; height:50px;color:black; font-size:large;">Predict</button><br> <br>
+        <a href="/land" class="btn btn-outline-primary" style="padding:15px;width:15%;height:50px;color:black;font-size:large;">Reset</a>
+    </form>
+    </div>
+    <div class="row">
+        {% if prediction %}
+        <h2> Feasible land type :  {{prediction}} </h2>
+        {%  endif  %}
+        
+        </div>  
+</body>
+</html>
