@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+  .second-content{
+        padding:100px;
+        margin-left:600px;
+  }
+  h2{
+    margin-left:600px;
+  }
+
+</style>
+<body>
+    <nav class="navbar navbar-light  justify-content-between" style="background-color:rgb(218, 229, 240)">
+        <form class="form-inline" style="padding:5px;">
+          <a href="/" class="btn btn-outline-primary  " type="submit">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="/land" class="btn btn-outline-primary  " type="submit">Forecaster</a>&nbsp;&nbsp;&nbsp;
+        </form>
+      </nav>
+      <h4 style="font-weight: bold;">GENERATION PREDICTION</h4> <br>
+
+      <h5 style="font-weight: bold;padding:30px;">Capacity factors allow energy buffs to examine the reliability of various power plants. 
+        It basically measures how often a plant is running at maximum power. A plant with a capacity factor of 100% means it’s 
+        producing power all of the time. <br>
+        Generation is a measure of electricity produced over time. Most electric power plants use some of the electricity they 
+produce to operate the power plant.Capacity is the maximum level of electric power (electricity) that a power plant can
+supply at a specific point in time under certain conditions.
+
+        </h5>
+      <div class="second-content">
+      <form action="/predict2" method="POST">
+        <input type="text" name="cp" placeholder="Capacity" style="width:20%;height:60px;border-radius:0.5em;border-color: blue;"><br><br>
+        <button class="btn btn-outline-primary" style="width:15%; height:50px;color:black; font-size:large;">Predict</button><br> <br>
+        <a href="/Estimator" class="btn btn-outline-primary" style="width:15%; height:50px;color:black; font-size:large;">Reset</a>
+    </form>
+    </div>
+    <div class="row">
+        {% if prediction %}
+        <h2> Estimated Generation  :  {{prediction}} GWh </h2>
+        {%  endif  %}
+        
+    </div>  
+  
+              <div class="menu">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <h5>Development of installed electric power plant capacity worldwide</h5>
+                          <img src="{{url_for('static', filename='Development-of-installed-electric-power-plant-capacity-worldwide-across-different-types.png')}}">
+                        </div>
+                        <div class="col-md-6">
+                          <img src="{{url_for('static', filename='Coal-firedpowergenerationcapacitysubjecttoanFID.jpg')}}">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="{{url_for('static', filename='powerplant estimation.png')}}">
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                      <div class="col-md-6">
+                        <img src="{{url_for('static', filename='upcoming.jpg')}}">
+                      </div>
+                      <div class="col-md-6">
+                        <img src="{{url_for('static', filename='Total-coal-fired-power-plant-capacity-globally-broken-down-by-age-and-generation.png')}}">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <img src="{{url_for('static', filename='ExImByCountryMonth.png')}}">
+                  </div>
+  
+              </div>
+</body>
+</html>
