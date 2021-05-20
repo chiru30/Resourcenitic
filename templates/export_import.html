@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light  justify-content-between" style="background-color:rgb(218, 229, 240);">
+        <a href="/" class="btn btn-outline-primary  " type="submit">Home</a>
+  </nav>
+  <h4 style="font-weight: bold;">IMPORT EXPORT RATES</h4> <br>
+  <h5 style="font-weight: bold;">A country's importing and exporting activity can influence its GDP, its exchange rate, and its level of inflation and 
+    interest rates.
+    A rising level of imports and a growing trade deficit can have a negative effect on a country's exchange rate.
+    A weaker domestic currency stimulates exports and makes imports more expensive; conversely, a strong domestic 
+    currency hampers exports and makes imports cheaper.
+    Higher inflation can also impact exports by having a direct impact on input costs such as materials and labor.
+    When a country is importing goods, this represents an outflow of funds from that country. Local companies are the 
+    importers and they make payments to overseas entities, or the exporters. A high level of imports indicates robust 
+    domestic demand and a growing economy. If these imports are mainly productive assets, such as machinery and equipment, 
+    this is even more favorable for a count
+    A healthy economy is one where both exports and imports are experiencing growth. This typically indicates economic 
+    strength and a sustainable trade surplus or deficit. If exports are growing, but imports have declined significantly, 
+    it may indicate that foreign economies are in better shape than the domestic economy. Conversely, if exports fall sharply
+    but imports surge, this may indicate that the domestic economy is faring better than overseas markets.</h5>
+    <form action='/export_import_rate' method="post" style="margin-left:500px;margin-top:100px;">
+          <input id="country" name="country" type="text" placeholder="Enter Country Name"  style="width:20%;height:60px;border-radius:0.5em;border-color:blue;" class="textbox"/></br></br>
+          
+          <button class="btn brn-outline-primary" type="submit" placeholder="Hello" style="padding:15px; font-size:large;border-radius: 0.5em;
+          border:3px solid black;
+          width:300px;
+          height:50px;">Show</button>
+          <a href="/export_import" class="btn btn-outline-primary" type="submit" placeholder="Hello" style="padding:15px;color:black; font-size:large;border-color:blue;border-radius: 0.5em;
+          border:3px solid black;
+          width:300px;
+          height:50px;">Reset</a>
+      </form>
+      {% block content %}
+      <div class="row">
+            <table class="worddark" style="margin-left:510px;margin-top:50px;font-size:x-large;"></br></br>
+                <tr>
+                    <td>Export :{{Export}}</td><br><br>
+                </tr>
+                <tr>
+                    <td>Import :{{Import}}</td><br>
+                </tr>
+                
+                <tr>
+                    <td>Total Trade:{{trade}}</td><br>
+                </tr>
+                <tr>
+                    <td>Value :{{value}}</td><br>
+                </tr>
+         </table>
+      </div>
+      {% endblock %}
+      <div class="main" style="padding:200px;">
+      <script type='text/javascript' src='https://dataviz.worldbank.org/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1255px; height: 580px;'><object class='tableauViz' width='1255' height='580' style='display:none;'><param name='host_url' value='https%3A%2F%2Fdataviz.worldbank.org%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;WITS' /><param name='name' value='Countryprofile&#47;CountryAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='display_spinner' value='no' /></object></div>
+      </div>
+      <hr>
+      <div class="menu" style="padding:20px;">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Bootom Five countries with lowest Export rates </h5>
+              <img src="{{url_for('static', filename='bottom_5_export.png')}}">
+            </div>
+            <div class="col-md-4">
+                <h5>Bootom Five countries with lowest import rates</h5>
+                <img src="{{url_for('static', filename='bottom_5_import.png')}}">
+              </div>
+            <div class="col-md-4">
+                <h5>Bottom five Countries with lowest value</h5>
+              <img src="{{url_for('static', filename='bottom_5_value.png')}}">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+             <h5>Export VS Country </h5>
+            <img src="{{url_for('static', filename='export_barplot.png')}}">
+          </div>
+          </div>
+          <div class="row">
+              <h5>Import VS Country</h5>
+          <div class="col">
+            <img src="{{url_for('static', filename='import_barplot.png')}}">
+          </div>
+          </div>
+          <div class="row">
+          <div class="col">
+              <h5>Trade VS Countries</h5>
+            <img src="{{url_for('static', filename='total_trade_barplot.png')}}">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <h5>Top Five Countries with Highest Import Rates</h5>
+            <img src="{{url_for('static', filename='top_5_import.png')}}">
+          </div>
+          <div class="col-md-4">
+              <h5>Top Five Countries with Highest Value Rates</h5>
+            <img src="{{url_for('static', filename='top_5_value.png')}}">
+          </div>
+          <div class="col-md-4">
+              <h5>Top Five Countries with Highest Export Rates</h5>
+            <img src="{{url_for('static', filename='top_5_export.png')}}">
+          </div>
+      </div>
+
+  </div>
+    </body>
+
+</html>
