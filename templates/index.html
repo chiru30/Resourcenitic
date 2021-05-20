@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#show').click(function() {
+      $('.menu').toggle("slide");
+    });
+});
+
+
+</script>
+</head>
+<style>
+    .container{
+        margin-left:32%;
+        margin-top:50px;
+    }
+    .row {
+  display: flex;
+}
+
+.column {
+  flex: 30%;
+}
+a{
+    border-radius: 0.5em;
+    border:3px solid black;
+    width:400px;
+    height:50px;
+}
+p{
+    font-size:30px;
+    text-indent: 30px;
+  text-transform: uppercase;
+}
+.fourth-content{
+    padding:10px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="margin-left:-200px;margin-top:100px;">
+        <img src="{{url_for('static', filename='WhatsApp Image 2021-05-08 at 11.15.31 (1).jpeg')}}" style="size:0vmax;margin-left:-150px;">
+        </div>
+            <div class="col-md-6" style="margin-top:150px;">
+                <div class="column" style="padding:10px;">
+                    <a href="/Estimator" class="btn btn-outline-primary" style="font-size:x-large;color:black;margin-left:150px;">Estimator</a> <br>
+                </div>
+                <div class="column" style="padding:10px;">
+                   <a href="/land" class="btn btn-outline-primary"  style="font-size:x-large;color:black;margin-left:150px;">Forecaster</a> <br>
+                </div>
+                <div class="column" style="padding:10px;">
+                    <a href="/gdprate" class="btn btn-outline-primary" style="padding:10px;font-size:x-large;color:black;margin-left:150px;">GDP Rates</a> <br>
+                </div>
+                <div class="column" style="padding:10px;">
+                   <a href="/national2" class="btn btn-outline-primary"  style="padding:10px;font-size:x-large;color:black;margin-left:150px;">National Share Rates</a> <br>
+                </div>
+                <div class="column" style="padding:10px;">
+                    <a href="/export_import" class="btn btn-outline-primary" style="padding:10px;font-size:x-large;color:black;margin-left:150px;">Import/Export Rates</a> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+     <br> <br> <br>
+
+    <div class="third-content">
+        <div class="twenty" id="show" style="font-size:30px;margin-left:45%;margin-top:-15px;color:blue;">About</div>
+
+            <div class="menu" style="display: none;">
+                  <p style="font-weight: bold;margin-left:10%;">RESOURCENITIC believes in the investment on natural resources to boost nation’s economy.
+                  </p>
+                  <p style="margin-left:20%;"> 
+                    Get started to explore more on the valuable shares and prices of <br>
+                       renewable energy starting from national share percentage, GDP, <br>
+                       import export rates , feasibility of projects and power plants , <br> 
+                    yield prediction , generation prediction and the list goes……
+                  </p>
+
+            </div>
+            </div>
+
+        
+           <!--<div class="second-content">
+                <div class="row" style="padding:50px;margin-left:300px;">
+                    <div class="column">
+                        <a href="/Estimator" class="btn btn-outline-primary" style="font-size:x-large;color:black;">Estimator</a>
+                    </div>
+                    <div class="column">
+                       <a href="/land" class="btn btn-outline-primary"  style="font-size:x-large;color:black;">Forecaster</a>
+                    </div>
+                </div>
+                </div>-->
+            <br>
+
+            <!--<div class="First-content">
+                <div class="row" style="padding:40px;margin-left:50px;">
+                    <div class="column">
+                        <a href="/gdprate" class="btn btn-outline-primary" style="padding:10px;font-size:large;color:black;">GDP Rates</a>
+                    </div>
+                    <div class="column">
+                       <a href="/national2" class="btn btn-outline-primary"  style="padding:10px;font-size:large;color:black;">National Share Rates</a>
+                    </div>
+                    <div class="column">
+                        <a href="/export_import" class="btn btn-outline-primary" style="padding:10px;font-size:large;color:black;">Import/Export Rates</a>
+                    </div>
+                </div>
+                </div>-->
+                <br>
+                <br>
+            <div class="fourth-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>Primary energy consumption from nuclear :</h1>
+                        <h4>‘Primary energy’ refers to energy in its raw form,
+                            before conversion into electricity, heat or transport 
+                            fuels. It is here measured in terms of 'input equivalents'
+                             via the substitution method: the amount of primary energy
+                              that would be required from fossil fuels to generate the 
+                               same amount of electricity from nuclear.</h4> <br><br>
+
+                               <iframe src="https://ourworldindata.org/grapher/primary-energy-nuclear?tab=chart&country=IND~OWID_WRL" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Energy consumption by source : </h1>
+                        <h4>Primary energy consumption is measured in terawatt-hours (TWh).
+                            Here an inefficiency factor (the 'substitution' method) has beenbr 
+                             applied for fossil fuels, meaning the shares by each energy source 
+                              give a better approximation of final energy consumption. </h4> <br> <br>
+
+                              <iframe src="https://ourworldindata.org/grapher/energy-consumption-by-source-and-region?country=~IND" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> 
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Annual change in primary energy consumption</h1>
+                        <h4>The annual change in primary energy consumption is measured in terawatt-hours (TWh) in one year relative 
+
+                            to the previous year.  </h4> <br> <br>
+
+                            <iframe src="https://ourworldindata.org/grapher/abs-change-energy-consumption?tab=chart&country=FIN~PHL~ZAF~IND" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>Energy use per person: </h1>
+                        <h4>Energy refers to primary energy – the energy input before the transformation to forms of energy for end-use (such as electricity or petrol for transport).</h4> <br> <br>
+                        <iframe src="https://ourworldindata.org/grapher/per-capita-energy-use" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> 
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Electricity production by source: </h1>
+                        <h4>Here , we can study the production of electricity through various sources and their contributions in TWh. 'Other renewables' includes biomass, waste, geothermal and wave and tidal energy</h4> <br> <br>
+                        <iframe src="https://ourworldindata.org/grapher/electricity-production-by-source?country=~IND" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> 
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Investment trends: </h1>
+                        <h4>This dashboard provides an overview on global renewable energy investment trends. </h4> <br> <br>
+                        <div class='tableauPlaceholder' id='viz1619420694802' style='position: relative'><noscript><a href='http:&#47;&#47;resourceirena.irena.org&#47;gateway&#47;dashboard&#47;?topic=6&amp;subTopic=11'><img alt='Investment Trends ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentTrends&#47;InvestmentTrends&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='InvestmentTrends&#47;InvestmentTrends' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InvestmentTrends&#47;InvestmentTrends&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619420694802');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='510px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='640px';vizElement.style.maxHeight='800px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='510px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='640px';vizElement.style.maxHeight='800px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='767px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>Renewable Energy Generation: </h1>
+                        <h4>Annual changes and shares of total are calculated using terawatt-hours figures.
+                            Other renewables' refers to renewable sources including geothermal, biomass, waste, wave and tidal. Traditional biomass is not included.</h4> <br> <br>
+                        <iframe src="https://ourworldindata.org/grapher/modern-renewable-energy-consumption" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Renewable energy finance flows:</h1>
+                        <h4>This dashboard provides an overview of renewable energy finance flows by development financial institutions. It covers investments linked to renewable energy project assets between the years 2009-2017. </h4> <br> <br>
+                        <div class='tableauPlaceholder' id='viz1619707268612' style='position: relative'><noscript><a href='http:&#47;&#47;resourceirena.irena.org&#47;gateway&#47;dashboard&#47;?topic=6&amp;subTopic=8'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;IR&#47;IRENARenewableEnergyFinanceFlows&#47;InvestmentTrends&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='IRENARenewableEnergyFinanceFlows&#47;InvestmentTrends' /><param name='tabs' value='yes' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;IR&#47;IRENARenewableEnergyFinanceFlows&#47;InvestmentTrends&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='publish' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619707268612');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='600px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='423px';vizElement.style.maxHeight='723px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='600px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='423px';vizElement.style.maxHeight='723px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.minWidth='600px';vizElement.style.maxWidth='100%';vizElement.style.height='723px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> 
+                    </div>
+                    <div class="col-md-4">
+                        <h1>Energy demand breakdown by sector:</h1>
+                        <h4>This dashboard provides an overview of the total final renewable energy demand by sector. It displays data by sector, country and energy sources </h4> <br> <br>
+                        <div class='tableauPlaceholder' id='viz1619707679246' style='position: relative'><noscript><a href='#'><img alt='Sector Energy Demand ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RE&#47;REmapSectorEnergyDemand&#47;SectorEnergyDemand&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='REmapSectorEnergyDemand&#47;SectorEnergyDemand' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RE&#47;REmapSectorEnergyDemand&#47;SectorEnergyDemand&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619707679246');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='400px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='400px';vizElement.style.maxHeight='600px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='400px';vizElement.style.maxWidth='700px';vizElement.style.width='100%';vizElement.style.minHeight='400px';vizElement.style.maxHeight='600px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> 
+                    </div>
+                </div>
+                <hr>
+            </div>  
+</body>
+</html>
