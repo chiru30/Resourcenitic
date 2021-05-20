@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#show').click(function() {
+              $('.menu').toggle("slide");
+            });
+        });
+        
+        
+        </script>
+</head>
+<body>
+    <nav class="navbar navbar-light  justify-content-between" style="background-color:rgb(218, 229, 240);">
+          <a href="/" class="btn btn-outline-primary  " type="submit">Home</a>
+    </nav>
+     <h4 style="font-weight: bold;">GROSS DOMESTIC PRODUCT</h4> <br>
+     <h5 style="font-weight: bold;">Gross domestic product (GDP) is the total monetary or market value of all the finished goods and services produced 
+      within a country's borders in a specific time period. As a broad measure of overall domestic production, it functions 
+      as a comprehensive scorecard of a given country's economic health.
+      
+      GDP provides an economic snapshot of a country, used to estimate the size of an economy and growth rate.
+      GDP can be calculated in three ways, using expenditures, production, or incomes. It can be adjusted for inflation and 
+      population to provide deeper insights.
+      Though it has limitations, GDP is a key tool to guide policymakers, investors, and businesses in strategic decision-making.</h5>
+    <form action='/gdp' method="post" style="margin-left:500px;margin-top:80px;">
+          <input id="country" name="country" type="text" placeholder="Enter Country Name" style="width:20%;height:60px;border-radius:0.5em;border-color: blue;" class="textbox"/></br></br>
+          <button class="btn btn-outline-primary" type="submit" placeholder="Hello" style="padding:15px;width:15%; height:50px;color:black; font-size:large;">Show</button>
+          <a href="" class="btn btn-outline-primary" type="submit" placeholder="Hello" style="padding:15px;width:15%; height:50px;color:black; font-size:large;">Reset</a>
+          
+      </form>
+
+
+      {% block content %}
+      <div class="row" >
+            <table class="worddark" style="margin-left:510px;margin-top:50px;font-size:x-large;"></br></br>
+                <tr>
+                    <td>GDP Rate:{{data}} %</td>
+                </tr>
+         </table>
+         
+      </div>
+      {% endblock %}
+      <br><br>
+      <div class="third-content" id="show">
+        <button style="margin-left:500px;padding:15px;width:10%; height:50px;color:black; font-size:large;border-radius:0.5em;">Show visuals</button>
+
+            <div class="menu" style="display: none;">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <h5>Barplot Country vs GDP</h5>
+                        <img src="{{url_for('static', filename='barplot.png')}}">
+                      </div>
+                      <div class="col-md-6">
+                        <h5>Bootom 5 Lowest GDP Rate Countries </h5>
+                        <img src="{{url_for('static', filename='bottom_5_gdp.png')}}">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>GDP VS DENSITY</h5>
+                      <img src="{{url_for('static', filename='distplot.png')}}">
+                    </div>
+                    <div class="col-md-6">
+                      <h5>GDP VS FREQUENCY</h5>
+                      <img src="{{url_for('static', filename='histogram.png')}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <h5>Lineplot (GDP VS COUNTRY)</h5>
+                      <img src="{{url_for('static', filename='lineplot.png')}}">
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Scatter Plot (GDP VS COUNTRY)</h5>
+                      <img src="{{url_for('static', filename='scatter_plot.png')}}">
+                    </div>
+                </div>
+
+            </div>
+            </div>
+     
+</body>
+</html>
