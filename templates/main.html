@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+
+body{
+    background-color:white;
+}
+h1{
+    font-family: "Comic Sans MS", Times, serif;
+    font-size: x-large;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #999999, 0 2px 0 #888888,
+             0 3px 0 #777777, 0 4px 0 #666666,
+             0 5px 0 #555555, 0 6px 0 #444444,
+             0 7px 0 #333333, 0 8px 7px rgba(0, 0, 0, 0.4),
+             0 9px 10px rgba(0, 0, 0, 0.2);
+}
+input{
+    border-radius: 0.5em;
+    border:3px solid blue;
+    padding:10px;
+    width:300px;
+}
+.main{
+    margin-top:100px;
+    border:6px solid #778899;
+    padding:20px;
+    box-shadow:15px 15px  rgb(55, 187, 240);
+}
+</style>
+<body>
+    <nav class="navbar navbar-light  justify-content-between" style="background-color:rgb(218, 229, 240)">
+        <form class="form-inline" style="padding:5px;">
+          <a href="/" class="btn btn-outline-primary  " type="submit">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="/land" class="btn btn-outline-primary  " type="submit">Land Prediction</a>&nbsp;&nbsp;&nbsp;
+          <a href="/home" class="btn btn-outline-primary  " type="submit">Region Prediction</a>&nbsp;&nbsp;&nbsp;
+        </form>
+      </nav>
+      <div class="content" style="padding:20px;">
+        <h5 style="font-weight: bold;"> Region Prediction: </h5>
+
+     <p>Estimated Energy : Energy output generation predicted from the particular power plant. <br>
+      Actual Energy : Actual Energy generated from the particular power plant. <br>
+      
+      The 3 main pillars being : Thermal , Nuclear and Hydro plays a key role in nation’s economy as its global demand keeps increasing daily.</p>
+      
+      <h5 style="font-weight: bold;">What does this section predict: </h5>
+      To start a new project on the above 3 pillars , one of the main factor to look into is the feasible region may it be Southern , Northern , Western etc to build it . <br>
+      As the renewable energy resources are based on the geographical location , predicting the region based on the estimated and actual energy outputs for nuclear, thermal and hydro for future projects is of prime importance. <br>
+      
+      <h5 style="font-weight: bold;">How this works: </h5>
+      <p>1. Enter the estimated and actual energy outputs in MU(mega units) for thermal, nuclear, and hydro of any existing power plant. <br>
+      2. Click on “Predict” to find out the feasible Region suitable for future projects to give better outcomes than the existing. </p>
+
+
+    <div class="container text-center" style="margin-top:50px;">
+    <form action="/predict" method="POST">
+        <div class="main">
+        <input type="text" name="TGA" placeholder="Thermal Actual"><br><br>
+        <input type="text" name="TGE" placeholder="Thermal Estimated"><br><br>
+        <input type="text" name="NGA" placeholder="Nuclear Actual"><br><br>
+        <input type="text" name="NGE" placeholder="Nuclear Estimated"><br><br>
+        <input type="text" name="HGA" placeholder="Hydro Actual"><br><br>
+        <input type="text" name="HGE" placeholder="Hydro Estimated"><br><br>
+        <button class="btn btn-outline-primary" style="border-radius: 0.8em;padding:15px;width:200px;color:black;font-size:large;">Predict</button><br><br>
+        <a href="/home" class="btn btn-outline-primary" style="border-radius: 0.8em;padding:15px;width:200px;color:black;font-size:large;">Reset</a><br>
+        </div>
+    </form>
+    </div><br><br><br><br>
+    <span style="margin-left:400px;"></span>
+    <!--<iframe src="https://data.worldbank.org/share/widget?indicators=NY.GDP.MKTP.KD.ZG&locations=IN" width='1100' height='600' frameBorder='20' scrolling="no" style="border:5px solid black;" ></iframe><br><br>
+    <div class='tableauPlaceholder' id='viz1619418276846' style='position: relative'><noscript>
+        <a href='https:&#47;&#47;www.irena.org&#47;geothermal'>
+            <img alt='Trends ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;G9&#47;G9W4BWX4T&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+             <param name='embed_code_version' value='3' /> 
+             <param name='path' value='shared&#47;G9W4BWX4T' /> 
+             <param name='toolbar' value='no' />
+             <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;G9&#47;G9W4BWX4T&#47;1.png' /> 
+             <param name='animate_transition' value='yes' />
+             <param name='display_static_image' value='yes' />
+             <param name='display_spinner' value='yes' />
+             <param name='display_overlay' value='yes' />
+             <param name='display_count' value='yes' /></object></div>                
+             <script type='text/javascript'>                  
+               var divElement = document.getElementById('viz1619418276846');                  
+                 var vizElement = divElement.getElementsByTagName('object')[0];                
+                     vizElement.style.minWidth='500px';vizElement.style.maxWidth='800px';vizElement.style.width='100%';vizElement.style.minHeight='500px';vizElement.style.maxHeight='750px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                 
+                        var scriptElement = document.createElement('script');                    
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                        </script>-->
+    <div class="row">
+
+{% if prediction %}
+<h2 style="margin-left:700px;margin-top:100px;background-color: coral;border: 3px solid grey;width:500px;text-align: center;"> Suitable Region :  {{prediction}} </h2>
+{%  endif  %}
+</div>
+</body>
+</html>
