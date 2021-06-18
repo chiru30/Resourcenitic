@@ -3,7 +3,7 @@
 ### By team - DATA UNRAVEL
 
 ### INSTRUCTIONS
-* Deployment Link:https://resourcenitic.herokuapp.com/
+* Deployment Link:https://resourcenitic-webapp.herokuapp.com
 * To check all machine learning models clone the repo and run it in your localserver
 * commands: <pre>
     <code>
